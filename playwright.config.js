@@ -7,7 +7,7 @@ import { defineConfig, devices } from '@playwright/test';
 // This lets you use process.env.BASE_URL, process.env.ADMIN_EMAIL, etc. in your tests
 // without hardcoding sensitive values in your code
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({ override: true });
 
 // Uncomment below if you want to load .env from a specific path instead of project root
 // import path from 'path';
@@ -28,7 +28,7 @@ export default defineConfig({
   // Runs all test files in parallel (each file in its own worker)
   // Speeds up execution significantly on large suitess
   // Set to false if your tests share state (e.g. same DB records, same logged-in session)
-  fullyParallel: true,
+  fullyParallel: false,
 
   // Prevents you from accidentally committing test.only() to your repo
   // On CI this will fail the entire run if any test.only() is found
@@ -112,7 +112,7 @@ export default defineConfig({
       // Slows down every Playwright action by N milliseconds
       // Useful when visually debugging a test — you can watch it run step by step
       // Always keep this commented out in CI
-      // slowMo: 1000,
+      //slowMo: 1000,
     },
   },
 

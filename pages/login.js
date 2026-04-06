@@ -4,7 +4,7 @@ export class LoginPage {
     constructor(page) {
         this.page = this.page;
         this.usernameinputbox = page.locator('[name="username"]');
-        this.passwordinputbox = page.locator('[placeholder="Password"]');
+        this.passwordinputbox = page.locator('[name="password"]');
         this.loginButton = page.locator('button[type="submit"]');
         this.logo = page.locator('[alt="client brand banner"]');
     }
