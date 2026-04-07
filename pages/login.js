@@ -2,7 +2,7 @@ import { expect } from "@playwright/test";
 
 export class LoginPage {
     constructor(page) {
-        this.page = this.page;
+        this.page = page;
         this.usernameinputbox = page.locator('[name="username"]');
         this.passwordinputbox = page.locator('[name="password"]');
         this.loginButton = page.locator('button[type="submit"]');
