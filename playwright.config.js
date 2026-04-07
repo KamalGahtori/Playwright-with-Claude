@@ -43,7 +43,7 @@ export default defineConfig({
   // How many parallel workers to use
   // On CI: 1 worker (sequential) to avoid resource conflicts on the CI machine
   // Locally: Playwright decides based on your CPU cores
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 1,
 
   // Maximum time a single test can run before it's marked as failed
   // 30s is the Playwright default — increase for slow apps or heavy flows

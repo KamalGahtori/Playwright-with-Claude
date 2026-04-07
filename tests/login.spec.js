@@ -5,8 +5,8 @@ let loginpage;
 
 test.describe("Validate Dashboard Data", () => {
     test.beforeEach("Visit URL", async ({ page }) => {
-        await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        await expect(page.locator('[alt="company-branding"]')).toBeVisible();
+        await page.goto(process.env.BASEURL);
+        await expect(page.locator('[class="orangehrm-login-branding"]')).toBeVisible();
     })
 
     test("Login", async ({ page }) => {
