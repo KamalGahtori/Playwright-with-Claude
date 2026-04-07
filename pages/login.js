@@ -9,6 +9,7 @@ export class LoginPage {
         this.logo = page.locator('[alt="client brand banner"]');
     }
     async login(username, password) {
+        await this.page.goto("/");
         await this.usernameinputbox.fill(username)
         await this.passwordinputbox.fill(password);
         await this.loginButton.click();

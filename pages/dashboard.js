@@ -12,13 +12,7 @@ export class Dashboard {
         expect(count).toBe(7);
     }
     async validateDashboardCardTitle() {
-        let dashboardCardTitleCount = this.dashboardCardTitle.count();
-        for (let i = 0; i <= dashboardCardTitleCount; i++) {
-            let title = this.dashboardCardTitle.nth(i).text();
-            if (title = "Time at Work") {
-                console.log("Title has a match");
-            }
-        }
+        await expect(this.dashboardCardTitle).toContainText("[Time at Work]")
 
     }
 }
